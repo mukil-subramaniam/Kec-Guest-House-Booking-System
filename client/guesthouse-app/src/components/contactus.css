@@ -1,0 +1,28 @@
+.contact-details {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: 85%;
+  margin: auto;
+  margin-bottom: 50px;
+  padding-top: 90px;
+}
+
+.hover-contact:hover {
+  transform: scale(1.05);
+  color: brown;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-details {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 586px) {
+  .contact-details {
+    margin-bottom: 20px;
+  }
+}
