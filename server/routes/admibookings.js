@@ -12,10 +12,10 @@ const transporter = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
     port: 465,
-    secure: true, // Use port 465 for secure connection
+    secure: true, 
     auth: {
-        user: "kecguesthouse24@gmail.com",
-        pass: "mwuifougiqfbaksy",
+        user: "kecguesthouse3@gmail.com",
+        pass: "csnchbhvifneterw",
     },
 });
 
@@ -61,7 +61,7 @@ router.put('/approve', async (req, res) => {
         };
         await updateRoomsByNumber(booking);
         var mailOptions = {
-            from: 'kecguesthouse24@gmail.com',
+            from: 'kecguesthouse3@gmail.com',
             to: booking.email,
             subject: `Regarding your booking status id: ${booking._id}`,
             text: `Congratulations!Your booking(id:${booking._id}) is approved and below is the summary of your booking.Hope you will have a good stay.
@@ -98,7 +98,7 @@ router.put('/reject', async (req, res) => {
         const booking = await bookingsmodel.findByIdAndUpdate(req.body.id, { status: "Rejected" }, { new: true });
         const user = await usersmodel.findById(booking.userid.toString());
         var mailOptions = {
-            from: 'kecguesthouse24@gmail.com',
+            from: 'kecguesthouse3@gmail.com',
             to: user.email,
             subject: `Regarding your booking status id: ${booking._id}`,
             text: `We are sorry for the inconvenience. Your booking(id:${booking._id}) booked on ${booking.bookedon} is rejected by the admin. You can try booking again or you can reach us.`
