@@ -80,7 +80,7 @@ export default function FormSubmission({ accomodation }) {
 
     try {
       const result = await axios.post(
-        'http://localhost:8082/bookings/book',
+        'https://kec-guest-house-booking-system.onrender.com/bookings/book',
         { details },
         {
           headers: {

@@ -26,7 +26,7 @@ export default function Registrationpage({ setStudentlogin }) {
     event.preventDefault();
     try {
       const { username, email, password, confirmpassword } = Registrationinfo;
-      const user = await axios.post('http://localhost:8082/users/register', {
+      const user = await axios.post('https://kec-guest-house-booking-system.onrender.com/users/register', {
         username,
         email,
         password,

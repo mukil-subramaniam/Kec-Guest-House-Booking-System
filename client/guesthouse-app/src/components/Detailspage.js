@@ -20,7 +20,7 @@ export default function Detailspage({ accomodation, details, setdetails }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const allrooms = await axios.get("http://localhost:8082/rooms/allrooms", {
+        const allrooms = await axios.get("https://kec-guest-house-booking-system.onrender.com/rooms/allrooms", {
           headers: {
             'x-token': cookies.access_token
           }

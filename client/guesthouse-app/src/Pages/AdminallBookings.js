@@ -22,7 +22,7 @@ const AdminallBookings=(() =>{
         const getting=async()=>{
            
               try{
-                const response= await axios.get(`http://localhost:8082/admibookings/bookings`, {
+                const response= await axios.get(`https://kec-guest-house-booking-system.onrender.com/admibookings/bookings`, {
                     headers: {
                       'x-token': cookies.admin_access_token
                     }

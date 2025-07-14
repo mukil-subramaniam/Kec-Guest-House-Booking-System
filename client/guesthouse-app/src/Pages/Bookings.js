@@ -21,7 +21,7 @@ export default function Bookings() {
   const [allbookings,setbookings]=useState([]);
   useState(async ()=>{
     try{
-      const bookings=await axios.get(`http://localhost:8082/bookings/book`,{headers: {
+      const bookings=await axios.get(`https://kec-guest-house-booking-system.onrender.com/bookings/book`,{headers: {
         'x-token': cookies.access_token
       }});
       if(bookings.data.Bookings.length===0){

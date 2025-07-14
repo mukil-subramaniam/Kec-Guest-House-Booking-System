@@ -23,7 +23,7 @@ export default function AdminLoginpage() {
     e.preventDefault();
     try{
       const {username,password}=logininfo;
-      const user = await axios.post('http://localhost:8082/users/adminlogin',{username,password});
+      const user = await axios.post('https://kec-guest-house-booking-system.onrender.com/users/adminlogin',{username,password});
       setCookies("admin_access_token", user.data.token);
       if(user.data.token){
         navigate('/dashboard/admins');

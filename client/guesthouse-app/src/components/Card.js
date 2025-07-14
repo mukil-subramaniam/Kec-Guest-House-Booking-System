@@ -29,7 +29,7 @@ const Card = ({ booking }) => {
   };
   useEffect(() => {
     const getting2 = async () => {
-      await axios.get("http://localhost:8082/rooms/allfreerooms", {
+      await axios.get("https://kec-guest-house-booking-system.onrender.com/rooms/allfreerooms", {
             headers: {
               'x-token': cookies.admin_access_token
             }

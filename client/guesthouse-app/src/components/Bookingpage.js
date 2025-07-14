@@ -38,7 +38,7 @@ export default function Bookingpage({ details, setdetails, cookies }) {
     const handleSubmit = async () => {
         try {
             setFormDataList((prevFormDataList) => [...prevFormDataList, details]);
-            await axios.post('http://localhost:8082/bookings/book', formDataList, {
+            await axios.post('https://kec-guest-house-booking-system.onrender.com/bookings/book', formDataList, {
                 headers: {
                     'x-token': cookies.access_token
                 }

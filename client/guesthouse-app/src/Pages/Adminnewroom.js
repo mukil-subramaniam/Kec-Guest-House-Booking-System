@@ -32,7 +32,7 @@ const Roomd = () => {
       alert("Please fill all the details!")
     }
     else{
-      await axios.post("http://localhost:8082/rooms/enter", { "roomnumber": selectoption, "options": inputvalue }, {
+      await axios.post("https://kec-guest-house-booking-system.onrender.com/rooms/enter", { "roomnumber": selectoption, "options": inputvalue }, {
         headers: {
           'x-token': cookies.admin_access_token
         }
@@ -55,7 +55,7 @@ const Roomd = () => {
       alert("Please fill all the details!")
     }
     else{
-        await axios.post("http://localhost:8082/users/newadmin", {
+        await axios.post("https://kec-guest-house-booking-system.onrender.com/users/newadmin", {
             "username": needadmin,
             "password": newpass
           }, {

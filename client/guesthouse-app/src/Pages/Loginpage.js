@@ -16,7 +16,7 @@ export default function Loginpage({ setStudentlogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const user = await axios.post('http://localhost:8082/users/login', { email, password });
+      const user = await axios.post('https://kec-guest-house-booking-system.onrender.com/users/login', { email, password });
       setCookies("access_token", user.data.token);
       if (user.data.token) {
         navigate('/home');

@@ -1,6 +1,4 @@
-import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-
 import Checkavaibility from './components/Checkavaibility';
 import Scrolltop from './components/Scrolltop';
 import AdminallBookings from './Pages/AdminallBookings';
@@ -13,10 +11,10 @@ import Bookings from './Pages/Bookings';
 import Formsumission from './Pages/Formsumission';
 import Homepage from './Pages/Homepage';
 
-import InitialPage from './Pages/initialPage';  
 import Gallery from './components/Gallery';
 import Newbook from './Pages/AdminBooking';
 import Roomd from './Pages/Adminnewroom';
+import InitialPage from './Pages/initialPage';
 
 import Studentlogin from './Pages/staffLogin';
 function App() {
