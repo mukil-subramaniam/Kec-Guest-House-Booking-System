@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Box, Grid, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './Gallery.css';
 
 const Image = styled('img') ({
