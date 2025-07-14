@@ -23,9 +23,9 @@ export default function Footer() {
             <div class='footlinks'>
                 <p class='heading_footer'>Quick Links</p>
                 <ul class='ulist'>
-                    <li class='lilist'><a href="#">Home</a></li>
-                    <li class='lilist'><a href="#">Contact us</a></li>
-                    <li class='lilist'><a href="#">Bookings</a></li>
+                    <li class='lilist'><a href="/home">Home</a></li>
+                    <li class='lilist'><a href="#contact">Contact us</a></li>
+                    <li class='lilist'><a href="/Bookings">Bookings</a></li>
                     <li class='lilist'><a href="https://www.kongu.ac.in/">Official Website</a></li>
                 </ul>
             </div>
@@ -33,7 +33,7 @@ export default function Footer() {
             <div clase='footlinks'>
                 <p class='heading_footer'>Social Links</p>
                 <ul>
-                    <li class='lilist'><a href="https://www.facebook.com/sharer/sharer.php?u=https://jsdl.in/DT-99A6EQIQ6EU&description=Check%20out%20this%20on%20Justdial! ">Facebook</a></li>
+                    <li class='lilist'><a href="#">Facebook</a></li>
                     <li class='lilist'><a href="#">Instagram</a></li>
                     <li class='lilist'><a href="#">Twitter</a></li>
                     <li class='lilist'><a href="#">Youtube</a></li>

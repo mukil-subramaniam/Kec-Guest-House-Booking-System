@@ -1,13 +1,8 @@
-import React, { useState,useEffect} from 'react'
-import './header.css'
-import { Link, useNavigate } from 'react-router-dom'
-import { MdMenu } from "react-icons/md";
+import React, { useState } from 'react';
 import { useCookies } from 'react-cookie';
-import Homemain from './Homemain';
-import Contactus from './Contactus';
-import Features from './Features';
-import Gallery from './Gallery';
-import Footer from './Footer';
+import { MdMenu } from "react-icons/md";
+import { Link, useNavigate } from 'react-router-dom';
+import './header.css';
 export default function Header() {
   const navigate = useNavigate();
   const [shownav,setshownav] = useState(false);
@@ -45,9 +40,9 @@ export default function Header() {
           <div className='nav_bar_all_res'><MdMenu className="resmenu" onClick={()=>{setshownav(!shownav)}} /></div>
           <div className='nav_links'>
             <ul className={!shownav?'navitems hide':'navitems'}>
-              <li><a href='#' className='header_links' onClick={()=>{setshownav(!shownav)}}>Home</a></li>
+              <li><a href='/home' className='header_links' onClick={()=>{setshownav(!shownav)}}>Home</a></li>
               <li><a href='#about' className='header_links' onClick={()=>{setshownav(!shownav)}}>About Us</a></li>
-              <li ><a href='#Gallery' className='header_links' onClick={()=>{setshownav(!shownav)}}>Gallery</a></li>
+              <li ><a href='/gallery' className='header_links' onClick={()=>{setshownav(!shownav)}}>Gallery</a></li>
               <li><a href="#contact" className="header_links" onClick={()=>{setshownav(!shownav)}}>Contact Us</a></li>
               <li><Link to='/Bookings' className='header_links' onClick={()=>{setshownav(!shownav)}}>Bookings</Link></li>
               <li><button onClick={logout}>Logout</button></li>

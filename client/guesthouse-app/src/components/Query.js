@@ -39,6 +39,7 @@ export default function Query() {
       if (data.success) {
         toast.success('Feedback submitted successfully');
         // Optionally, reset the form or clear input fields
+        e.target.reset(); 
       } else {
         toast.error('Failed to submit feedback');
       }

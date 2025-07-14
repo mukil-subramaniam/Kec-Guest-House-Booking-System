@@ -1,35 +1,32 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Loginpage from './Pages/Loginpage';
-import Registrationpage from './Pages/Registrationpage';
-import Homepage from './Pages/Homepage';
-import Book from './Pages/Book';
-import Allrooms from './Pages/Allrooms'
-import Checkavaibility from './components/Checkavaibility'
-import Formsumission from './Pages/Formsumission';
-import Bookings from './Pages/Bookings';
-import AdminLoginpage from './Pages/Adminlogin';
-import Adminwebsite from './Pages/Adminwebsite';
-import AdminallBookings from './Pages/AdminallBookings';
-import Scrolltop from './components/Scrolltop';
-import Detail from './Pages/Adminpagedetails';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-import Roomd from './Pages/Adminnewroom';
-import Newbook from './Pages/AdminBooking';
-import Facultyinterface from './Pages/Facultyinterface';
-import Facultyform from './components/Facultyform';
-import Facultybookings from './components/Facultybookings';
-import Iitjguesthouseloginregister from './Pages/Iitjguesthouseloginregister';
-import Studentlogin from './Pages/Studentlogin';
+import Checkavaibility from './components/Checkavaibility';
+import Scrolltop from './components/Scrolltop';
+import AdminallBookings from './Pages/AdminallBookings';
+import AdminLoginpage from './Pages/Adminlogin';
+import Detail from './Pages/Adminpagedetails';
+import Adminwebsite from './Pages/Adminwebsite';
+import Allrooms from './Pages/Allrooms';
+import Book from './Pages/Book';
+import Bookings from './Pages/Bookings';
+import Formsumission from './Pages/Formsumission';
+import Homepage from './Pages/Homepage';
+
+import InitialPage from './Pages/initialPage';  
 import Gallery from './components/Gallery';
+import Newbook from './Pages/AdminBooking';
+import Roomd from './Pages/Adminnewroom';
+
+import Studentlogin from './Pages/staffLogin';
 function App() {
   return (
     <Router>
       <Scrolltop />
        <Routes>
           <Route path='/gallery' element={<Gallery />} />
-          <Route path='/' element={<Iitjguesthouseloginregister />}/>
-          <Route path='/student-login' element={<Studentlogin />} />
+          <Route path='/' element={<InitialPage />}/>
+          <Route path='/staff-login' element={<Studentlogin />} />
           <Route path='/admin-login' element={<AdminLoginpage />} />
           <Route path="/dashboard/admins" element={<Adminwebsite />}>
               <Route path="/dashboard/admins" element ={<AdminallBookings />}/>
@@ -38,16 +35,13 @@ function App() {
               <Route path="/dashboard/admins/newbooking" element ={<Newbook />}/>
           </Route>
           <Route path='/home' element={<Homepage />} />
+         
           <Route path="/booknow" element={<Book />}>
-            <Route path="/booknow" element={<Checkavaibility />} />
-            <Route path="/booknow/rooms" element={<Allrooms />} />
+            <Route path="/booknow" element={<Checkavaibility />} />            <Route path="/booknow/rooms" element={<Allrooms />} />
             <Route path='/booknow/bookingpage' element={<Formsumission />} />
           </Route>
           <Route path='/Bookings' element={<Bookings />} />
-          <Route path='/faculty'  element={<Facultyinterface />}>
-            <Route path="/faculty/" element={<Facultyform />} />
-            <Route path='/faculty/bookings' element={<Facultybookings />} />
-          </Route>
+          
         </Routes>
     </Router>
   );

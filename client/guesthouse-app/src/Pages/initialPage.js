@@ -25,7 +25,7 @@ export default function Iitjguesthouseloginregister() {
       navigate('/admin-login')
     }
     else if (loginType===3){
-      navigate('/student-login')
+      navigate('/staff-login')
     }
     
   }

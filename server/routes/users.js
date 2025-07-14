@@ -12,13 +12,7 @@ require("dotenv").config();
 
 router.get('/test', (req, res) => res.send('book route testing!'));
 
-var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'mukil4058@gmail.com',
-        pass: 'MUKIL@984'
-    }
-});
+
 
 router.post('/register', async (req, res) => {
     const { username, email, password, confirmpassword } = req.body;
